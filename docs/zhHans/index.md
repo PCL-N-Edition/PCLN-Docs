@@ -1,33 +1,39 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "PCLC Docs"
-  text: "适用于 PCL Community 相关项目的统一文档"
-  tagline: 由社区开发者与成员共同维护
+  name: "PCL N Docs"
+  text: "从使用启动器到开发插件"
+  tagline: 与 PCL N、PCL.Plugin 和 Plugin SDK 同步维护的官方文档
   actions:
     - theme: brand
-      text: PCL CE 帮助文档
-      link: /ce/
+      text: 开始开发插件
+      link: /plugin-sdk/Getting-Started
     - theme: alt
-      text: 项目一览
-      link: /projects
+      text: 浏览插件商店
+      link: https://pcln.top/
+    - theme: alt
+      text: GitHub Wiki
+      link: https://github.com/MuXue1230-owo/PCL-N-Plugin-SDK/wiki
   image:
     src: /logo.png
-    alt: PCL-Community
+    alt: PCL N
 
 features:
-  - title: 内容丰富
-    icon: ❤️
-    details: 从 PCL CE 到 PlainToolkit.WinRT，囊括几乎所有 PCL Community 的作品。
-  - title: 查阅迅速
+  - title: 完整上手路径
     icon: 🚀
-    details: 本地搜索、简单布局、轻量排版，一切只为高效、迅速而生。
-  - title: 社区共建
-    icon: ✍️
-    details: 文档由全部社区成员共同自愿参与维护，我们相信社区的力量！
-    link: ./ce/launcher/contribute-to-help-docs
-    linkText: 参与贡献
+    details: 从创建 net10.0 项目、编写 Manifest，到安装、调试、签名和发布 .pnp。
+    link: /plugin-sdk/Getting-Started
+    linkText: 阅读快速开始
+  - title: 可复制的实战案例
+    icon: 🧩
+    details: 命令、通知、设置、后台任务、实例读取、设置页、AXAML、依赖和测试案例。
+    link: /plugin-sdk/Examples-Cookbook
+    linkText: 查看案例集
+  - title: 与运行时同步
+    icon: 🛡️
+    details: 文档以当前公开 SDK 与 PCL.Plugin 的真实服务、权限、UI Surface 和安全行为为准。
+    link: /plugin-sdk/Architecture-and-Boundaries
+    linkText: 了解架构
 ---
 

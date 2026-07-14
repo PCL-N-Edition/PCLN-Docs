@@ -7,8 +7,8 @@ import { VitePressI18nOptions } from 'vitepress-i18n/types';
 const vitepressConfig: UserConfig = {
   srcDir: "docs",
   
-  title: "PCLC Docs",
-  description: "适用于 PCL Community 相关项目的统一文档",
+  title: "PCL N Docs",
+  description: "PCL N 用户与插件开发文档",
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -25,15 +25,15 @@ const vitepressConfig: UserConfig = {
     logo: '/logo.png',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/PCL-Community' }
+      { icon: 'github', link: 'https://github.com/MuXue1230-owo/PCL-N' }
     ],
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © <a href="https://github.com/PCL-Community">PCL Community</a>'
+      message: 'Documentation released under CC BY-SA 4.0.',
+      copyright: 'Copyright © 2026 <a href="https://github.com/MuXue1230-owo">PCL N contributors</a>'
     },
     editLink: {
-      pattern: 'https://github.com/PCL-Community/docs.pclc.cc/edit/main/docs/:path',
+      pattern: 'https://github.com/MuXue1230-owo/PCLN-Docs/edit/main/docs/:path',
     },
   },
 }
@@ -52,12 +52,12 @@ const i18nConfig: VitePressI18nOptions = {
           link: '/'
         },
         {
-          text: 'Project List',
+          text: 'PCL N Projects',
           link: '/en/projects'
         },
         {
-          text: 'Official Website',
-          link: 'https://www.pclc.cc'
+          text: 'Plugin Market',
+          link: 'https://pcln.top/'
         },
       ]
     },
@@ -68,12 +68,20 @@ const i18nConfig: VitePressI18nOptions = {
           link: '/'
         },
         {
-          text: '项目列表',
-          link: '/projects'
+          text: '插件开发',
+          link: '/plugin-sdk/'
         },
         {
-          text: '官网',
-          link: 'https://www.pclc.cc'
+          text: '插件商店',
+          link: 'https://pcln.top/'
+        },
+        {
+          text: '身份认证',
+          link: 'https://auth.pcln.top/'
+        },
+        {
+          text: '项目列表',
+          link: '/projects'
         },
       ]
     }

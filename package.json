@@ -1,10 +1,10 @@
 {
-  "name": "docs.pclc.cc",
-  "version": "0.0.0",
-  "description": "适用于 PCL Community 相关项目的统一文档",
+  "name": "pcln-docs",
+  "version": "1.0.0",
+  "description": "PCL N 用户与插件开发文档",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:sync": "node scripts/sync-plugin-sdk-docs.mjs",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
@@ -12,8 +12,8 @@
   "keywords": [
     "Minecraft"
   ],
-  "author": "PCL-Community",
-  "license": "MIT",
+  "author": "PCL N contributors",
+  "license": "CC-BY-SA-4.0",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
