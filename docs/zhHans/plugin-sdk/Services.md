@@ -1,6 +1,8 @@
 # 服务
 
-> SDK `0.1.0`。服务通过稳定 ID 和独立版本范围协商。
+> Applies to PCL N Plugin SDK 0.2.0.
+
+> SDK `0.2.0`。服务通过稳定 ID 和独立版本范围协商。
 
 插件从 `context.Services` 获取宿主服务。真正不可缺少的服务写入 Manifest 的 `services.required`；增强体验但可降级的服务写入 `services.optional`。
 
@@ -17,20 +19,33 @@
 | `pcl.commands` | `IPluginCommandService` | 注册和调用命令 |
 | `pcl.tasks` | `IPluginTaskService` | 由生命周期管理的后台任务 |
 | `pcl.instances.read` | `IPluginInstanceReadService` | 只读 Minecraft实例列表 |
-| `pcl.game.sessions` | `IPluginGameSessionService` | 只读游戏会话快照 |
-| `pcl.game.output` | `IPluginGameOutputService` | 读取并订阅游戏进程输出 |
-| `pcl.launch.events` | `IPluginLaunchEventService` | 订阅启动生命周期事件 |
-| `pcl.process` | `IPluginProcessService` | 受控启动子进程并获取退出码/输出 |
-| `pcl.clipboard` | `IPluginClipboardService` | 通过 Host 读写文本剪贴板 |
-| `pcl.files` | `IPluginFileService` | 在插件隔离数据目录内读写文件 |
-| `pcl.accounts.read` | `IPluginAccountReadService` | 只读账户提供者列表 |
-| `pcl.downloads` | `IPluginDownloadService` | 只读下载源列表 |
-| `pcl.launch.modify` | `IPluginLaunchModificationService` | 注册启动参数/环境变量修改器 |
 | `pcl.localization` | `IPluginLocalizationService` | 读取 Host当前语言和插件本地化字符串 |
 | `pcl.secure-storage` | `IPluginSecureStorage` | Host托管的插件隔离凭据存储 |
 | `pcl.uri-launcher` | `IPluginUriLauncher` | 通过 Host 打开外部 HTTP/HTTPS 链接 |
+| `pcl.background-tasks` | `IPluginBackgroundTaskService` | 启动器任务管理进度（与 MC 安装下载同界面） |
 
 这些 ID定义在 `PluginServiceIds`。`IPluginLogger` 和 `IPluginDispatcher` 同时通过 `context.Logger`、`context.Dispatcher` 提供便捷入口。
+
+### 任务管理进度（`pcl.background-tasks`）
+
+用于插件自己的下载、安装、更新等长任务，进度会进入宿主「任务管理」页（与 Minecraft 安装相同 UI）：
+
+```csharp
+IPluginBackgroundTaskService tasks = context.Services.Require<IPluginBackgroundTaskService>();
+using IPluginBackgroundTask task = tasks.Begin("下载资源包", openTaskManager: true);
+try
+{
+    task.Report(new PluginBackgroundTaskProgress("下载中", "1.2 MB / 4.0 MB", Progress: 0.3, SpeedBytesPerSecond: 120_000));
+    // ... 使用 task.Token 支持用户取消
+    task.Complete("下载完成");
+}
+catch (OperationCanceledException)
+{
+    task.Fail("已取消", canceled: true);
+}
+```
+
+建议在 Manifest `services.optional` 中声明 `"pcl.background-tasks": ">=0.1 <1.0"`，以便在不支持该服务的 Host 上降级为静默进度或日志。
 
 ### UI与导航服务
 

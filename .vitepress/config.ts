@@ -75,6 +75,12 @@ const pluginSdkSidebar = [
   },
 ];
 
+const englishPluginSdkSidebar = pluginSdkSidebar.map(section => ({
+  ...section,
+  text: section.text,
+  items: section.items.map(item => ({ ...item, link: `/en${item.link}` }))
+}));
+
 const vitepressConfig: UserConfig = {
   srcDir: "docs",
   
@@ -100,12 +106,14 @@ const vitepressConfig: UserConfig = {
     },
     sidebar: {
       '/plugin-sdk/': pluginSdkSidebar,
+      '/en/plugin-sdk/': englishPluginSdkSidebar,
       '/en/': [
         {
           text: 'PCL N',
           items: [
             { text: 'Home', link: '/en/' },
             { text: 'Projects', link: '/en/projects' },
+            { text: 'Plugin SDK 0.2.0', link: '/en/plugin-sdk/' },
           ],
         },
       ],
@@ -161,8 +169,8 @@ const i18nConfig: VitePressI18nOptions = {
           link: 'https://pcln.top/'
         },
         {
-          text: '身份认证',
-          link: 'https://auth.pcln.top/'
+          text: '开发者工作台',
+          link: 'https://pcln.top/#/home'
         },
         {
           text: '项目列表',

@@ -1,6 +1,6 @@
 {
   "name": "pcln-docs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PCL N 用户与插件开发文档",
   "main": "index.js",
   "scripts": {
