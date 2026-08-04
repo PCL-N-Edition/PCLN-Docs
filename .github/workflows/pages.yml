@@ -1,41 +1,23 @@
-name: Deploy documentation
+# GitHub Pages deployment has been retired.
+# Production docs.pcln.top is on Cloudflare Pages (project: pcln-docs).
+# See: .github/workflows/cloudflare-pages.yml
+name: Deploy GitHub Pages (retired)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+    inputs:
+      confirm:
+        description: "Type RETIRED to no-op (deployment moved to Cloudflare Pages)"
+        required: true
+        type: string
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  notice:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11.7.0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: pnpm
-      - uses: actions/configure-pages@v5
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm docs:build
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: .vitepress/dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
-
+      - name: Retired
+        run: |
+          echo "GitHub Pages deploy is retired. Use cloudflare-pages.yml for docs.pcln.top."
+          if [ "${{ inputs.confirm }}" != "RETIRED" ]; then
+            exit 1
+          fi
