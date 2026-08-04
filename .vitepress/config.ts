@@ -22,6 +22,7 @@ const pluginSdkSidebar = [
       { text: 'NuGet 包', link: '/plugin-sdk/NuGet-Packages' },
       { text: '插件身份与版本', link: '/plugin-sdk/Plugin-Identity-and-Versioning' },
       { text: '生命周期与注册项', link: '/plugin-sdk/Lifecycle-and-Registrations' },
+      { text: '注册表与运行时注入', link: '/plugin-sdk/Registry-and-Runtime-Patches' },
       { text: '兼容与废弃', link: '/plugin-sdk/Compatibility-and-Deprecation' },
     ],
   },
@@ -113,7 +114,7 @@ const vitepressConfig: UserConfig = {
           items: [
             { text: 'Home', link: '/en/' },
             { text: 'Projects', link: '/en/projects' },
-            { text: 'Plugin SDK 0.2.0', link: '/en/plugin-sdk/' },
+            { text: 'Plugin SDK 0.2.5', link: '/en/plugin-sdk/' },
           ],
         },
       ],
