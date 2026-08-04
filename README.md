@@ -51,12 +51,27 @@ pnpm deploy:cf
 
 ### 自定义域
 
-工作流会尝试绑定 `docs.pcln.top`。DNS（Zone `pcln.top`）建议：
+工作流会尝试把 `docs.pcln.top` 挂到 Pages 项目 **pcln-docs**。  
+若 API Token **没有** `Zone → DNS → Edit`，自动写 DNS 会失败，需在 Dashboard 手动添加：
 
 | 类型 | 名称 | 目标 | 代理 |
 |------|------|------|------|
-| CNAME | `docs` | `pcln-docs.pages.dev` | 橙云 |
+| CNAME | `docs` | `pcln-docs.pages.dev` | 橙云（Proxied） |
 
-若仍指向 GitHub Pages / 其它 Worker，请在 Cloudflare Dashboard 调整，并确保域名只挂在 **pcln-docs** 项目上。
+路径：Cloudflare Dashboard → **pcln.top** → DNS → 添加上述 CNAME。  
+Pages → **pcln-docs** → Custom domains 中应出现 `docs.pcln.top`（Active）。
 
-旧 **GitHub Pages** 工作流已退役（`pages.yml` 仅提示）。
+旧 **GitHub Pages** 站点已关闭；仓库内 `pages.yml` 仅保留退役提示。
+
+### 与商店站共用 Token
+
+可与 `PCL-N-Plugin-Center-Web` 的 Environment `cloudflare-pages` 使用同一套：
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+建议权限至少：
+
+- Account → Cloudflare Pages → Edit  
+- Account → Account Settings → Read  
+- Zone → DNS → Edit（Zone `pcln.top`，用于自动写 `docs` CNAME）
