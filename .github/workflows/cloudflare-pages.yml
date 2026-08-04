@@ -78,12 +78,13 @@ jobs:
         run: |
           set -euo pipefail
           PROJECT=pcln-docs
-          npx --yes wrangler@4 whoami || true
-          if ! npx --yes wrangler@4 pages project list 2>/dev/null | grep -F "$PROJECT" >/dev/null; then
+          # Use pnpm dlx — npx fails on this package's devEngines (pnpm-only).
+          pnpm dlx wrangler@4 whoami || true
+          if ! pnpm dlx wrangler@4 pages project list 2>/dev/null | grep -F "$PROJECT" >/dev/null; then
             echo "Creating Pages project: $PROJECT"
-            npx --yes wrangler@4 pages project create "$PROJECT" --production-branch=main
+            pnpm dlx wrangler@4 pages project create "$PROJECT" --production-branch=main
           fi
-          npx --yes wrangler@4 pages deploy .vitepress/dist \
+          pnpm dlx wrangler@4 pages deploy .vitepress/dist \
             --project-name="$PROJECT" \
             --branch=main \
             --commit-dirty=true
