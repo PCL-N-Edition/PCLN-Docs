@@ -6,6 +6,7 @@ exclude: true
 
 - [PCL N](https://github.com/MuXue1230-owo/PCL-N) — 跨平台 Minecraft 启动器。
 - [PCL N Plugin SDK](https://github.com/MuXue1230-owo/PCL-N-Plugin-SDK) — 第三方插件公开契约、工具、Analyzer 和测试宿主。
+- [PXML Compiler](https://github.com/PCL-N-Edition/PXML-Compiler) — PXML 1.0 官方 C 编译器、PXB 工具链与全平台发行版。
 - [PCL N 插件商店](https://pcln.top/) — 浏览、购买和发布插件。
 - [插件中心前端](https://github.com/MuXue1230-owo/PCL-N-Plugin-Center-Web) — 商店与发布者工作台。
 - [插件中心服务端](https://github.com/MuXue1230-owo/PCL-N-Plugin-Center-Server) — 市场 API、发布审核与安全扫描。

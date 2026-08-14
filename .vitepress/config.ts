@@ -82,6 +82,32 @@ const englishPluginSdkSidebar = pluginSdkSidebar.map(section => ({
   items: section.items.map(item => ({ ...item, link: `/en${item.link}` }))
 }));
 
+const pxmlCompilerSidebar = [
+  {
+    text: 'PXML Compiler',
+    collapsed: false,
+    items: [
+      { text: '概览与安装', link: '/pxml-compiler/' },
+      { text: '命令行参考', link: '/pxml-compiler/CLI' },
+      { text: '编译阶段与 PXB', link: '/pxml-compiler/Pipeline-and-PXB' },
+      { text: '发布、PGO 与差分', link: '/pxml-compiler/Releases-and-PGO' },
+    ],
+  },
+];
+
+const englishPxmlCompilerSidebar = [
+  {
+    text: 'PXML Compiler',
+    collapsed: false,
+    items: [
+      { text: 'Overview and installation', link: '/en/pxml-compiler/' },
+      { text: 'CLI reference', link: '/en/pxml-compiler/CLI' },
+      { text: 'Pipeline and PXB', link: '/en/pxml-compiler/Pipeline-and-PXB' },
+      { text: 'Releases, PGO, and diffs', link: '/en/pxml-compiler/Releases-and-PGO' },
+    ],
+  },
+];
+
 const vitepressConfig: UserConfig = {
   srcDir: "docs",
   
@@ -108,12 +134,15 @@ const vitepressConfig: UserConfig = {
     sidebar: {
       '/plugin-sdk/': pluginSdkSidebar,
       '/en/plugin-sdk/': englishPluginSdkSidebar,
+      '/pxml-compiler/': pxmlCompilerSidebar,
+      '/en/pxml-compiler/': englishPxmlCompilerSidebar,
       '/en/': [
         {
           text: 'PCL N',
           items: [
             { text: 'Home', link: '/en/' },
             { text: 'Projects', link: '/en/projects' },
+            { text: 'PXML Compiler', link: '/en/pxml-compiler/' },
             { text: 'Plugin SDK 0.2.5', link: '/en/plugin-sdk/' },
           ],
         },
@@ -150,6 +179,10 @@ const i18nConfig: VitePressI18nOptions = {
           link: '/en/projects'
         },
         {
+          text: 'PXML Compiler',
+          link: '/en/pxml-compiler/'
+        },
+        {
           text: 'Plugin Market',
           link: 'https://pcln.top/'
         },
@@ -164,6 +197,10 @@ const i18nConfig: VitePressI18nOptions = {
         {
           text: '插件开发',
           link: '/plugin-sdk/'
+        },
+        {
+          text: 'PXML Compiler',
+          link: '/pxml-compiler/'
         },
         {
           text: '插件商店',
