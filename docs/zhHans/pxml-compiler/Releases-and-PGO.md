@@ -14,7 +14,7 @@ Windows/Linux: -fuse-ld=lld
 三个程序不共享综合 corpus：
 
 ```text
-真实 component/slot/build/template authoring → pxml-expand.profdata
+真实 component/import/slot/build/template authoring → pxml-expand.profdata
 真实 expanded PXML → compact/optimized PXIR    → pxml-opt.profdata
 真实 optimized PXIR → PXB                      → pxml-compiler.profdata
 ```

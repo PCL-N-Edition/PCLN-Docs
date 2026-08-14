@@ -4,7 +4,7 @@
 
 ```bash
 pxml-expand INPUT.pxml -o EXPANDED.pxml \
-  [--component FILE]... [-D SYMBOL]...
+  [--component FILE]... [--import FILE]... [-D SYMBOL]...
 
 pxml-opt EXPANDED.pxml -o OPTIMIZED.pxir [--debug]
 
@@ -12,13 +12,14 @@ pxml-compile OPTIMIZED.pxir -o OUTPUT.pxb \
   [--debug] [--strict] [--warn-as-error]
 ```
 
-`--component` 与 `-D` 可重复。`pxml-opt` 的输出是紧凑二进制 PXIR，而不是另一份文本 PXML。`pxml-compile` 不重新解析或展开 source，只消费 optimized PXIR。
+`--component`、`--import` 与 `-D` 可重复；`--import` 只允许解析显式注册的 `x:Import Source`，不会在展开器中隐式访问任意路径。`pxml-opt` 的输出是紧凑二进制 PXIR，而不是另一份文本 PXML。`pxml-compile` 不重新解析或展开 source，只消费 optimized PXIR。
 
 ## 完整内存管线
 
 ```bash
 pxmlc --full INPUT.pxml -o OUTPUT.pxb \
   [--component FILE]... [-D SYMBOL]... \
+  [--import FILE]... \
   [--release] [--strict] [--warn-as-error]
 ```
 

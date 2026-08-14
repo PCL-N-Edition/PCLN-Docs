@@ -12,7 +12,7 @@ Windows/Linux: -fuse-ld=lld
 The programs never share a synthetic catch-all corpus:
 
 ```text
-real component/slot/build/template authoring → pxml-expand.profdata
+real component/import/slot/build/template authoring → pxml-expand.profdata
 real expanded PXML → compact optimized PXIR   → pxml-opt.profdata
 real optimized PXIR → PXB                     → pxml-compiler.profdata
 ```

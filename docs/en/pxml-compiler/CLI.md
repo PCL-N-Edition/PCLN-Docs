@@ -4,19 +4,20 @@
 
 ```bash
 pxml-expand INPUT.pxml -o EXPANDED.pxml \
-  [--component FILE]... [-D SYMBOL]...
+  [--component FILE]... [--import FILE]... [-D SYMBOL]...
 pxml-opt EXPANDED.pxml -o OPTIMIZED.pxir [--debug]
 pxml-compile OPTIMIZED.pxir -o OUTPUT.pxb \
   [--debug] [--strict] [--warn-as-error]
 ```
 
-`--component` and `-D` are repeatable. `pxml-opt` emits compact binary PXIR. `pxml-compile` consumes that optimized IR directly and does not parse or expand source PXML again.
+`--component`, `--import`, and `-D` are repeatable. Imports resolve only against explicitly registered files; the expander does not open arbitrary paths implicitly. `pxml-opt` emits compact binary PXIR. `pxml-compile` consumes that optimized IR directly and does not parse or expand source PXML again.
 
 ## In-memory full pipeline
 
 ```bash
 pxmlc --full INPUT.pxml -o OUTPUT.pxb \
   [--component FILE]... [-D SYMBOL]... \
+  [--import FILE]... \
   [--release] [--strict] [--warn-as-error]
 ```
 
