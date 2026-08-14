@@ -84,13 +84,21 @@ const englishPluginSdkSidebar = pluginSdkSidebar.map(section => ({
 
 const pxmlCompilerSidebar = [
   {
-    text: 'PXML Compiler',
+    text: 'PXML 编译器',
     collapsed: false,
     items: [
       { text: '概览与安装', link: '/pxml-compiler/' },
       { text: '命令行参考', link: '/pxml-compiler/CLI' },
       { text: '编译阶段与 PXB', link: '/pxml-compiler/Pipeline-and-PXB' },
       { text: '发布、PGO 与差分', link: '/pxml-compiler/Releases-and-PGO' },
+    ],
+  },
+  {
+    text: 'PXML UI 教程',
+    collapsed: false,
+    items: [
+      { text: '教程概览', link: '/pxml-compiler/ui-tutorial/' },
+      { text: '创建第一个界面', link: '/pxml-compiler/ui-tutorial/First-Page' },
     ],
   },
 ];
@@ -104,6 +112,14 @@ const englishPxmlCompilerSidebar = [
       { text: 'CLI reference', link: '/en/pxml-compiler/CLI' },
       { text: 'Pipeline and PXB', link: '/en/pxml-compiler/Pipeline-and-PXB' },
       { text: 'Releases, PGO, and diffs', link: '/en/pxml-compiler/Releases-and-PGO' },
+    ],
+  },
+  {
+    text: 'PXML UI tutorials',
+    collapsed: false,
+    items: [
+      { text: 'Tutorial overview', link: '/en/pxml-compiler/ui-tutorial/' },
+      { text: 'Create your first UI', link: '/en/pxml-compiler/ui-tutorial/First-Page' },
     ],
   },
 ];
@@ -142,7 +158,7 @@ const vitepressConfig: UserConfig = {
           items: [
             { text: 'Home', link: '/en/' },
             { text: 'Projects', link: '/en/projects' },
-            { text: 'PXML Compiler', link: '/en/pxml-compiler/' },
+            { text: 'PXML', link: '/en/pxml-compiler/' },
             { text: 'Plugin SDK 0.2.5', link: '/en/plugin-sdk/' },
           ],
         },
@@ -179,7 +195,7 @@ const i18nConfig: VitePressI18nOptions = {
           link: '/en/projects'
         },
         {
-          text: 'PXML Compiler',
+          text: 'PXML',
           link: '/en/pxml-compiler/'
         },
         {
@@ -199,7 +215,7 @@ const i18nConfig: VitePressI18nOptions = {
           link: '/plugin-sdk/'
         },
         {
-          text: 'PXML Compiler',
+          text: 'PXML',
           link: '/pxml-compiler/'
         },
         {
