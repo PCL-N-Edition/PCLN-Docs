@@ -1,4 +1,12 @@
-# PXML Compiler
+# PXML
+
+这里汇总 PXML UI 的教程与官方编译器文档。
+
+## PXML UI 教程
+
+从 [教程概览](/pxml-compiler/ui-tutorial/) 开始，逐步学习页面结构、布局、文本、按钮、Command，以及从 `.pxml` 到 `.pxb` 的完整构建流程。
+
+## PXML Compiler
 
 PXML Compiler 是 PXML 1.0 的官方 C17 原生工具链。它在构建期把 authoring PXML 转换成确定性的 PXB blueprint；运行时不需要 XML parser、反射或动态组件发现。
 
