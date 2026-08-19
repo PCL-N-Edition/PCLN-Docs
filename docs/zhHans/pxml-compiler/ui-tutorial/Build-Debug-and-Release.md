@@ -55,6 +55,10 @@ pxmlc dump out/Home.pxb
 
 标准 symbol 包括 DEBUG/RELEASE、WINDOWS/LINUX/MACOS 以及产品 edition。相同输入、编译器版本、profile、symbol 与资源必须生成 byte-identical PXB。CI 可以连续构建两次并逐字节比较。
 
+## 运行时加载边界
+
+PCL.UI.Next **只接受编译后的 PXB**。运行时通过 `UiBlueprint.FromPxmlBinary(...)` 加载不可变 Blueprint，**不会**在进程内解析 `.pxml` 源文件。开发期请始终走 `pxmlc` / `pxml-compile` 产出 `.pxb`，再交给宿主或插件 UI 管线。
+
 ## 发布边界
 
 - Core UI 的 PXB 随应用发布，由 Runtime ABI/version gate 验证。
