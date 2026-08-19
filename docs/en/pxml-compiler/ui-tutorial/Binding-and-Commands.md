@@ -41,4 +41,3 @@ NativeHost writes follow `platform event → generation validation → command/s
 Troubleshoot stale bindings by checking dependency publication, command registration, effective Disabled/Visible state, overlay barriers, and template locals.
 
 Next: [Conditions, lists, and virtualization](./Structure-and-Lists).
-

@@ -65,4 +65,3 @@ Use `x:Name` only when a node is referenced and use stable `Key`/`x:Key` values 
 Validate each increment with `pxmlc check Page.pxml --strict`. Strict mode rejects unknown properties, malformed literals, incompatible markup kinds, missing UI namespaces, invalid scopes, and unresolved components.
 
 Next: [Layout and sizing](./Layout-and-Sizing).
-

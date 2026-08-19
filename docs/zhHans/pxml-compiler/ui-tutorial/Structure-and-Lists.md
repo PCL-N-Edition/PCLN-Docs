@@ -73,4 +73,3 @@ VirtualList 的核心 contract：
 | 平台/版本在构建时决定 | `x:IfBuild`，不是运行时 If |
 
 下一章：[组件、模板与 Slot](./Components-and-Templates)。
-

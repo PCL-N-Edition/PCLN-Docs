@@ -49,4 +49,3 @@ pxmlc dump DownloadPage.pxb
 The host registers the typed Download state schema, command IDs, localization table, theme tokens, component schema, and VirtualList source adapter. These are build/Runtime integration contracts, never objects discovered by reflection from a page.
 
 You now have the complete path from source authoring and component reuse through reactive state, virtualization, and release PXB. Keep the [CLI reference](/en/pxml-compiler/CLI) and [pipeline guide](/en/pxml-compiler/Pipeline-and-PXB) nearby.
-

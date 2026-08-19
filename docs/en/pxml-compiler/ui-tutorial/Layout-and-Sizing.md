@@ -50,4 +50,3 @@ Grid track declarations are validated by the target UI profile's component schem
 Layout Measure passes the actual available content width to text shaping. Viewport shrink changes line count, desired height, and LayoutRect in the same layout convergence—never estimate height from character count.
 
 Next: [Bindings, commands, and events](./Binding-and-Commands).
-

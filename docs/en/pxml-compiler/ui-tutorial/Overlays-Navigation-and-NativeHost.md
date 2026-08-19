@@ -46,4 +46,3 @@ Keys are unique per host. Lifecycle completion uses an internal lossless queue, 
 The backend creates the platform control. It inherits ancestor visibility/enabled state, uses InputRoot-scoped focus/pointer identity, obeys overlay policy and occlusion, and writes through generation-safe events. Destroyed scopes reject stale timers, animation completions, platform events, and commands.
 
 Next: [Build, debug, and release](./Build-Debug-and-Release).
-

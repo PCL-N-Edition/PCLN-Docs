@@ -83,4 +83,3 @@ pxmlc check Page.pxml --strict
 ```
 
 下一章：[布局与尺寸](./Layout-and-Sizing)。
-

@@ -47,4 +47,3 @@ Only viewport + overscan items receive slots. Scrolling preserves slots that rem
 Use runtime If/feature for observable state and `x:IfBuild` for compile-time platform/edition branches.
 
 Next: [Components, templates, and slots](./Components-and-Templates).
-

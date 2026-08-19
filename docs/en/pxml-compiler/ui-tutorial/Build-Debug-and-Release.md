@@ -43,4 +43,3 @@ CI should run strict warnings-as-errors, build twice and compare bytes, and keep
 Troubleshoot in order: format, strict check, expanded PXML, PXB dump, then Runtime Binding/Layout/Motion/Scope traces.
 
 Finish with the [complete page example](./Complete-Example).
-

@@ -69,4 +69,3 @@ TextChanged → validate Entity/Scope → StatePatch → binding evaluation
 - 列表项读错数据：在 Template 中使用 `item`/声明的 `As` local，不要引用外层临时索引。
 
 下一章：[条件、列表与虚拟化](./Structure-and-Lists)。
-

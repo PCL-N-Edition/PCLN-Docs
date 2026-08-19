@@ -71,4 +71,3 @@ pxmlc dump out/Home.pxb
 5. Runtime DevTools 查看 Binding、Layout、Motion 和 Scope trace。
 
 最后阅读：[完整页面示例](./Complete-Example)。
-

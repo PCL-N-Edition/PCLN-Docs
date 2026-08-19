@@ -72,4 +72,3 @@ viewport 缩小时，父约束变化会触发文本重新 measure，行数、高
 5. 可滚动大集合：VirtualList，而不是 Scroll + 全量 child。
 
 下一章：[Binding、Command 与事件](./Binding-and-Commands)。
-

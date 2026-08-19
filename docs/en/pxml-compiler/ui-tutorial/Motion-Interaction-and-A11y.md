@@ -42,4 +42,3 @@ Semantic Tree is independent of Render Tree. A modal removes out-of-scope semant
 Check that visual transforms and hit testing agree, icon buttons have localized names, Disabled blocks every activation path, focus order matches reading order, and Reduced Motion completes navigation/overlay lifecycles.
 
 Next: [Overlays, navigation, and NativeHost](./Overlays-Navigation-and-NativeHost).
-

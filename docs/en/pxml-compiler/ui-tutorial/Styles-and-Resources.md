@@ -36,4 +36,3 @@ Theme names become `ThemeTokenId`, resources become `ResourceId`, and localizati
 Use semantic tokens for spacing, colors, and motion. Keep one-off local dimensions inline, and keep visible text plus accessible names consistently localized without exposing secrets in semantic output.
 
 Next: [Motion, interaction, and accessibility](./Motion-Interaction-and-A11y).
-

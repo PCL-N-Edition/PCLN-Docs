@@ -66,4 +66,3 @@ PXML 只描述 platform host contract，Avalonia backend 创建实际控件。Na
 Overlay handle、NativeHost、Navigation page 和 routed handler 都属于 Scope。Scope 销毁后，旧 generation 的 timer、animation completion、platform event 或 command 不得重新激活已销毁页面。
 
 下一章：[构建、调试与发布](./Build-Debug-and-Release)。
-

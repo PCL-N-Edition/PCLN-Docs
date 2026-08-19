@@ -91,4 +91,3 @@ pxmlc dump DownloadPage.pxb
 Host 还需要注册强类型 Download state schema、Command ID、本地化表、Theme Token、VersionCard 的组件 schema，以及 VirtualList 的 `IUiVirtualItemSource` adapter。它们是构建/Runtime integration contract，不应通过反射从页面对象临时发现。
 
 至此，你已经走完从 source authoring、复用组件、响应式状态、虚拟化到 Release PXB 的完整路径。继续查阅 [编译器 CLI](/pxml-compiler/CLI) 和 [编译阶段与 PXB](/pxml-compiler/Pipeline-and-PXB)。
-

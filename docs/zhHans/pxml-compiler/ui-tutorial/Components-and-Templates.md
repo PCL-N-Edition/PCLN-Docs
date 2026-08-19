@@ -89,4 +89,3 @@ pxmlc --full Page.pxml -o Page.pxb \
 `x:Const` 和 `x:IfBuild` 在 Release Blueprint 中消失。运行时功能开关应使用 `{feature ...}` 或运行时 `x:If`。
 
 下一章：[样式、主题与资源](./Styles-and-Resources)。
-

@@ -83,4 +83,3 @@ Ui/
 把间距、颜色和 motion 使用语义 token 表达；避免在大量页面复制 magic number。局部一次性尺寸仍可以 inline。
 
 下一章：[动效、交互与无障碍](./Motion-Interaction-and-A11y)。
-

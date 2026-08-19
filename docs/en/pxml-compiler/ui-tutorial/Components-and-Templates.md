@@ -48,4 +48,3 @@ pxmlc --full Page.pxml -o Page.pxb \
 `x:Import Source` resolves only to a file explicitly registered with `--import`; components use `--component`. `x:Const` and `x:IfBuild` disappear from release blueprints after folding.
 
 Next: [Styles, themes, and resources](./Styles-and-Resources).
-
